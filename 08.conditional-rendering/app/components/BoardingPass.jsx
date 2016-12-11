@@ -7,7 +7,7 @@ const GetFlightNumber = function(props) {
       <b>Flight #:</b> {props.flightNumber}<br></br>
       <b>Gate:</b> C4<br></br>
       <b>Departure:</b> 13:26<br></br>
-      <button>Print</button>
+      <button onClick={props.onClick}>Print</button>
     </div>
   );
 }

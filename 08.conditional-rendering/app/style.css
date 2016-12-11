@@ -15,3 +15,25 @@
 /* @import 'styles/components/button'; */
 @import 'styles/components/card';
 /* @import 'styles/components/workflow'; */
+
+body {
+  background-color: lightgray;
+  margin: 0 15px 0 15px;
+}
+.warning {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  padding: 20px 10px 20px 10px;
+}
+
+.good-flight-number {
+  background-color: green;
+}
+.bad-flight-number {
+  background-color: red;
+}
+
+.airplane-image {
+  width: 40px;
+}
