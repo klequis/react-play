@@ -1,0 +1,57 @@
+@import 'normalize.css';
+
+@import 'styles/base/variables';
+@import 'styles/base/mixins';
+
+@import 'styles/base/elements';
+@import 'styles/base/util';
+@import 'styles/base/theme';
+@import 'styles/base/type';
+@import 'styles/base/layout';
+
+@import 'styles/base/image';
+
+/* @import 'styles/components/input'; */
+/* @import 'styles/components/button'; */
+@import 'styles/components/card';
+/* @import 'styles/components/workflow'; */
+
+body {
+  background-color: lightgray;
+  margin: 0 15px 0 15px;
+}
+.warning {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  padding: 20px 10px 20px 10px;
+}
+
+.good-flight-number {
+  background-color: green;
+}
+.bad-flight-number {
+  background-color: red;
+}
+
+.airplane-image {
+  width: 40px;
+}
+
+.red-rectangle {
+  background-color: red;
+  color: white;
+  min-height: 40px;
+  max-width: 200px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.blue-rectangle {
+  background-color: blue;
+  color: white;
+  min-height: 40px;
+  max-width: 200px;
+  text-align: center;
+  vertical-align: middle;
+}
