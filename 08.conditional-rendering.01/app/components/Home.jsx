@@ -9,16 +9,16 @@ export default class Home extends Component {
     super(props);
     this.state = {
       flag: false,
-      someNumber: 5,
     };
   }
 
   render() {
+    // (A)
     let rectangle = null;
     if (this.state.flag) {
       rectangle = <BlueRectangle />;
     } else {
-      rectangle = <RedRectangle />
+      rectangle = <RedRectangle />;
     }
 
     return(

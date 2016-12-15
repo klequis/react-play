@@ -1,25 +1,22 @@
 import React from 'react';
-import Welcome01 from "./Welcome01";
-import Welcome02 from "./Welcome02";
+import Auto01 from "./Auto01";
+import Auto02 from "./Auto02";
+import Auto03 from "./Auto03";
+import Auto04 from "./Auto04";
 
 const Home = function home() {
     return(
       <section>
-        <h1>Sample project: react-play.props</h1>
-        <p>This sample project shows you how to create Functional components. See README.md and comments in the code for more information.</p>
-        <h2>Welcome01</h2>
-        <ul>
-          <li>Takes one prop: 'name'</li>
-          <li>Below, Welcome01 is used 3 times so it renders 3 times. Look at the code to see this.</li>
-        </ul>
-        <Welcome01 name="klequis" />
-        <Welcome01 name="karl" />
-        <Welcome01 name="ecker" />
-        <h2>Welcome02</h2>
-        <ul>
-          <li>Welcome02 takes 3 props: first, last & state</li>
-        </ul>
-        <Welcome02 first="Karl" last="Ecker" state="California" />
+        <h1>Sample project: react-play.props.01</h1>
+        <h2>You can use the same component multiple times</h2><hr></hr>
+        <Auto01 make="Toyota" />
+        <Auto01 make="Mazda" />
+        <Auto01 make="Infiniti" />
+        <h2>You can pass multiple variables</h2><hr></hr>
+        <Auto02 make="Toyota" model="Highlander" type="SUV" />
+        <h2>You can psss arrays and objects</h2><hr></hr>
+        <Auto03 car={{make: "Inifinti", model: "Q60", type: "Coupe"}} />
+        <Auto04 clientName={["Infiniti", "Q60", "Coupe"]} />
       </section>
     );
   }

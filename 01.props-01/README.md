@@ -2,7 +2,7 @@
 
 **Author:** klequis
 
-This example project shows you how to use 'props' and to create 'functional' components. The major two tyes of component in React are 'functional' and 'class' components.
+This example project shows you how to use 'props' and to create 'functional' components. The major two types of component in React are 'functional' and 'class' components.
 
 ## Components & Props
 ### Functional Component
@@ -16,5 +16,3 @@ function Welcome(props) {
 - React will always pass 'props' to your custom component
 - Data flows down the hierarchy
 - Props are read-only
-
-
