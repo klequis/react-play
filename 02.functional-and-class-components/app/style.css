@@ -1,0 +1,31 @@
+@import 'normalize.css';
+
+@import 'styles/base/variables';
+@import 'styles/base/mixins';
+
+@import 'styles/base/elements';
+@import 'styles/base/util';
+@import 'styles/base/theme';
+@import 'styles/base/type';
+@import 'styles/base/layout';
+
+@import 'styles/base/image';
+
+/* @import 'styles/components/input'; */
+/* @import 'styles/components/button'; */
+@import 'styles/components/card';
+/* @import 'styles/components/workflow'; */
+
+body{
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+h2 {
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
+
+h3 {
+  color: rgb(87, 145, 207);
+}
