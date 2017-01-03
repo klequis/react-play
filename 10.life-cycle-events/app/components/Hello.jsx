@@ -1,28 +1,42 @@
+"use strict";
+
 import React from 'react';
+import Utils from "../lib/ke-utils.js";
 
 export default class Hello extends React.Component {
   constructor(props) {
+    Utils.logFunction("Hello.constructor");
     super(props);
     this.state = {
       bcity: "",
+      testState: "",
     };
   }
 
   componentDidMount() {
-    console.log("> componentDidMount()");
+    Utils.logFunction("Hello.componentDidMount");
+
+    Utils.log("setState");
+    this.setState({
+      testState: "New York",
+    })
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log("> componentWillReceiveProps()");
+    Utils.logFunction("Hello.componentWillReceiveProps");
   }
 
   componentWillUpdate(nextProps, nextState) {
-    console.log("> componentWillUpdate()");
+    Utils.logFunction("Hello.componentWillUpdate");
   }
 
   render() {
+    Utils.logFunction("Hello.render")
     return(
-      <h1>HELLO</h1>
+      <div>
+        <h1>HELLO</h1>
+        <h1>{this.state.testState}</h1>
+      </div>
     )
   }
 

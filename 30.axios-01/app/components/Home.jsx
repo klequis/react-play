@@ -18,28 +18,35 @@ export default class Home extends Component {
     }
   }
 
-/*
-  console.log(response.data);
-  this.setState({
-    ipAddress: response.data.ip,
-    city: response.data.city,
-    region: response.data.region,
-    country: response.data.country,
-    loc: response.data.loc,
-    postal: response.data.postal,
-  });
-*/
-
   componentDidMount() {
     Utils.logFunction("componentDidMount");
-    let url = "http://ipinfo.io/json";
-    this.getData(url, function(response) {
+    let _this = this;
+
+    let url1 = "http://ipinfo.io/json";
+    let url2 = "https://api.ipify.org?format=json";
+    let url3 = "http://api.openweathermap.org/data/2.5/weather?q=dublin,us&units=imperial&APPID=cd605b9a7b8b517b82492ee7bf47a295";
+
+    this.getData(url1, function(response) {
+
+      Utils.log("one");
+      console.log(response.data);
+      _this.setState({
+        ipAddress: response.data.ip,
+        city: response.data.city,
+        region: response.data.region,
+        country: response.data.country,
+        loc: response.data.loc,
+        postal: response.data.postal,
+      });
+    });
+    this.getData(url2, function(response) {
+      Utils.log("two");
       console.log(response.data);
     });
-    url = "https://api.ipify.org?format=json";
-    this.getData(url, function(response) {
+    this.getData(url3, function(response) {
+      Utils.log("three");
       console.log(response.data);
-    })
+    });
   }
 
   getData(url, callback) {
@@ -52,8 +59,6 @@ export default class Home extends Component {
         console.error(error);
       });
   }
-
-
 
   render() {
     console.log("render");
